@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0-git",
+  "name": "marble-shell",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "types": "./scripts.nu types"
+  },
+  "devDependencies": {
+    "@ts-for-gir/cli": "latest"
+  },
+  "dependencies": {
+    "ags": "github:aylur/ags",
+    "es-toolkit": "^1.39.10",
+    "gnim": "^1.8.0",
+    "gnim-hooks": "^0.1.0",
+    "gnofi": "^1.3.1",
+    "marble": "github:marble-shell/kit"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 90,
+    "quoteProps": "consistent",
+    "proseWrap": "always",
+    "overrides": [
+      {
+        "files": "**.md",
+        "options": {
+          "printWidth": 80
+        }
+      }
+    ]
+  }
+}

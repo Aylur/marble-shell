@@ -1,0 +1,116 @@
+{
+  "nodes": {
+    "ags": {
+      "inputs": {
+        "astal": [
+          "astal"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758577685,
+        "narHash": "sha256-iHT0kvsQJG+Z89quGi7rNCXEg2e3DBGfuuCMu/UwiIo=",
+        "owner": "aylur",
+        "repo": "ags",
+        "rev": "aa7a8a2dd6e54aaeb4e13a73ed3bc2283995090b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aylur",
+        "repo": "ags",
+        "type": "github"
+      }
+    },
+    "astal": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1757497936,
+        "narHash": "sha256-BSfvr7wdY5SbathVlrOW7vCyI9UGVIe2b9rTJ0O5IKo=",
+        "owner": "aylur",
+        "repo": "astal",
+        "rev": "344a6dce56437a190b99e516a6cab8332cccf19e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aylur",
+        "repo": "astal",
+        "type": "github"
+      }
+    },
+    "marble": {
+      "inputs": {
+        "astal": [
+          "astal"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758577720,
+        "narHash": "sha256-IhiSBskB2OeLpQCzzLAegCGh29/48GYe3g2Dv/ggfto=",
+        "ref": "ui",
+        "rev": "153f69a50cac7f07cb39fb12aea1048547fd9eb8",
+        "revCount": 118,
+        "type": "git",
+        "url": "ssh://git@github.com/marble-shell/shell"
+      },
+      "original": {
+        "ref": "ui",
+        "type": "git",
+        "url": "ssh://git@github.com/marble-shell/shell"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1758277210,
+        "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "ags": "ags",
+        "astal": "astal",
+        "marble": "marble",
+        "nixpkgs": "nixpkgs",
+        "sshKey": "sshKey"
+      }
+    },
+    "sshKey": {
+      "flake": false,
+      "locked": {
+        "dir": "ssh/id_rsa",
+        "lastModified": 1757525313,
+        "narHash": "sha256-E95IHvxtyd8cZZ4b3kQX0uH44xhV41fps52CaSiSj2Q=",
+        "ref": "refs/heads/main",
+        "rev": "4c2cfdcfd5c6fb9729a4d1e5b18c5790c5ba66af",
+        "revCount": 84,
+        "type": "git",
+        "url": "ssh://git@github.com/aylur/vault"
+      },
+      "original": {
+        "dir": "ssh/id_rsa",
+        "type": "git",
+        "url": "ssh://git@github.com/aylur/vault"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
