@@ -21,7 +21,7 @@ export default function MuteToggle() {
       >
         <Box gap={3}>
           <MicrophoneIndicator iconSize={18} alwaysVisible />
-          <Text size={1.1} weight={mute((d) => (d ? "bold" : "normal"))}>
+          <Text truncate size={1.1} weight={mute((d) => (d ? "bold" : "normal"))}>
             {mute((d) => (d ? t("Muted") : t("Unmuted")))}
           </Text>
         </Box>

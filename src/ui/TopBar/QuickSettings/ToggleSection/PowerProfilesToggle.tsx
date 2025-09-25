@@ -38,7 +38,7 @@ export default function PowerProfilesToggle() {
     <MenuToggleButton id="powerprofiles" r={13} px={6} active={active} onToggled={toggle}>
       <Box gap={3}>
         <PowerProfilesIndicator iconSize={18} />
-        <Text size={1.1} weight={active((a) => (a ? "bold" : "normal"))}>
+        <Text truncate size={1.1} weight={active((a) => (a ? "bold" : "normal"))}>
           {text}
         </Text>
       </Box>

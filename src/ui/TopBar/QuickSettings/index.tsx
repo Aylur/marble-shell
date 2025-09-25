@@ -33,13 +33,13 @@ export default function QuickSettings(props: {
       my={34}
       mx={8}
     >
-      <Adw.Clamp maximumSize={360}>
+      <Adw.Clamp maximumSize={400}>
         <MenuContext value={[menu, setMenu]}>
           {() => (
             <Box vertical>
               <Box
                 vertical
-                widthRequest={360}
+                widthRequest={400}
                 r={28}
                 class={useStyle(dialogStyle)}
                 overflowHidden

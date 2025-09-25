@@ -15,6 +15,7 @@ function Content(props: { icon?: Icon.Props["icon"]; text?: Text.Props["children
       <Box vertical valign={Gtk.Align.CENTER}>
         <Text
           size={1.1}
+          truncate
           halign={Gtk.Align.START}
           weight={dark((d) => (d ? "bold" : "normal"))}
         >

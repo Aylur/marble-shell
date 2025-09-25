@@ -26,7 +26,7 @@ export default function DNDToggle() {
             dndIcon="notifications-disabled-symbolic"
             notifIcon="org.gnome.Settings-notifications-symbolic"
           />
-          <Text size={1.1} weight={dnd((d) => (d ? "bold" : "normal"))}>
+          <Text truncate size={1.1} weight={dnd((d) => (d ? "bold" : "normal"))}>
             {dnd((d) => (d ? t("Silent") : t("Noisy")))}
           </Text>
         </Box>

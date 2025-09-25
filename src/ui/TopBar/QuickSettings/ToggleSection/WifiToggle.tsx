@@ -28,6 +28,7 @@ export default function WifiToggle() {
                 <Icon size={18} icon={icon} />
                 <Box vertical valign={Gtk.Align.CENTER}>
                   <Text
+                    truncate
                     halign={Gtk.Align.START}
                     size={1.1}
                     weight={enabled((e) => (e ? "bold" : "normal"))}

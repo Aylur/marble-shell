@@ -28,6 +28,7 @@ export default function BluetoothToggle() {
         <BluetoothIndicator iconSize={18} />
         <Box vertical valign={Gtk.Align.CENTER}>
           <Text
+            truncate
             halign={Gtk.Align.START}
             size={1.1}
             weight={powered((a) => (a ? "bold" : "normal"))}
