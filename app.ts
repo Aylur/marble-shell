@@ -62,7 +62,7 @@ app.start({
           monitor,
           color: "black",
           overlay: true,
-          radius: 18,
+          radius: 17,
         })
       })
     })

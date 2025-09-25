@@ -61,7 +61,7 @@ function BarStart() {
         )}
         onPrimaryClick={() => gnofi.open("")}
       >
-        <Icon icon="system-search" />
+        <Icon icon="fire" />
       </Button>
       {app.isHyprland && (
         <Button {...style} onPrimaryClick={() => gnofi.open(":w ")}>
