@@ -26,15 +26,14 @@ export default function AppButton(props: {
         p={2}
         hexpand
         halign={Gtk.Align.CENTER}
-        widthRequest={60}
-        heightRequest={60}
+        widthRequest={90}
+        heightRequest={90}
       >
         <Icon
           vexpand={!label}
           valign={Gtk.Align.CENTER}
           icon={icon}
-          fallback="application-x-executable-symbolic"
-          size={36}
+          size={76}
           colored={!props.symbolic}
         />
         {label && (
