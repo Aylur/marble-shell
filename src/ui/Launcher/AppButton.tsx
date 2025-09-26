@@ -10,7 +10,7 @@ export default function AppButton(props: {
 }) {
   const { app, label } = props
   const { gnofi } = useGnofi()
-  const icon = app.get_icon()?.to_string()
+  const icon = app.get_icon()?.to_string() || "application-x-executable"
   const name = app.get_name()
 
   function onClick() {
@@ -29,15 +29,14 @@ export default function AppButton(props: {
         widthRequest={60}
         heightRequest={60}
       >
-        {icon && (
-          <Icon
-            vexpand={!label}
-            valign={Gtk.Align.CENTER}
-            icon={icon}
-            size={36}
-            colored={!props.symbolic}
-          />
-        )}
+        <Icon
+          vexpand={!label}
+          valign={Gtk.Align.CENTER}
+          icon={icon}
+          fallback="application-x-executable-symbolic"
+          size={36}
+          colored={!props.symbolic}
+        />
         {label && (
           <Text truncate halign={Gtk.Align.CENTER} weight="bold" size={1.1}>
             {name}
