@@ -1,15 +1,16 @@
 import GioUnix from "gi://GioUnix"
 import Gtk from "gi://Gtk?version=4.0"
-import { Box, Button, Text } from "marble/components"
+import { Box, Button, Icon, Text } from "marble/components"
 import { useGnofi } from "#/gnofi"
 
 export default function AppButton(props: {
   app: GioUnix.DesktopAppInfo
   label?: boolean
+  symbolic?: boolean
 }) {
   const { app, label } = props
   const { gnofi } = useGnofi()
-  const icon = app.get_icon()
+  const icon = app.get_icon()?.to_string()
   const name = app.get_name()
 
   function onClick() {
@@ -25,15 +26,16 @@ export default function AppButton(props: {
         p={2}
         hexpand
         halign={Gtk.Align.CENTER}
-        widthRequest={90}
-        heightRequest={90}
+        widthRequest={60}
+        heightRequest={60}
       >
         {icon && (
-          <Gtk.Image
+          <Icon
             vexpand={!label}
             valign={Gtk.Align.CENTER}
-            gicon={icon}
-            pixelSize={76}
+            icon={icon}
+            size={36}
+            colored={!props.symbolic}
           />
         )}
         {label && (

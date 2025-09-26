@@ -15,7 +15,7 @@ export default function Dock() {
     <Box vertical visible={isActive}>
       <Separator />
       <Box p={4} homogeneous>
-        <For each={apps}>{(app) => <AppButton app={app} />}</For>
+        <For each={apps}>{(app) => <AppButton app={app} symbolic />}</For>
       </Box>
       <Box homogeneous>
         <TaskList />

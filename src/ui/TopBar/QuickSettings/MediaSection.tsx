@@ -1,3 +1,4 @@
+import Mpris from "gi://AstalMpris"
 import Gtk from "gi://Gtk?version=4.0"
 import {
   Box,
@@ -18,6 +19,7 @@ import {
 } from "marble/components"
 import { cls, useStyle, variables as v } from "marble/theme"
 import { widgetStyle } from "#/theme"
+import { createBinding } from "gnim"
 
 function MediaPlayer({ coverSize = 100 }) {
   const image = useStyle({
@@ -59,13 +61,14 @@ function MediaPlayer({ coverSize = 100 }) {
 }
 
 export default function MediaSection(
-  props: Omit<Box.Props, "children" | "vertical"> & { flat?: boolean },
+  props: Omit<Box.Props, "children" | "vertical" | "visible"> & { flat?: boolean },
 ) {
   const { flat, ...rest } = props
   const style = useStyle(widgetStyle)
+  const list = createBinding(Mpris.get_default(), "players")
 
   return (
-    <Box vertical {...rest}>
+    <Box vertical visible={list((l) => l.length > 0)} {...rest}>
       <MprisList>
         {() => (
           <Box class={cls(!flat && style)}>

@@ -6,14 +6,14 @@ import NotificationPopups from "#/ui/NotificationPopups"
 import TopBar from "#/ui/TopBar"
 import Wallpaper from "#/ui/Wallpaper"
 import Launcher from "#/ui/Launcher"
-import { nucharm, adwaita, initCss } from "#/theme"
+import { nucharm, adwaita, grid, initCss } from "#/theme"
 import { GnofiProvider } from "#/gnofi"
 import { findProviders } from "gnofi"
 import { gettext as t } from "gettext"
 import app from "#/app"
 
 app.start({
-  themes: [nucharm, adwaita],
+  themes: [nucharm, adwaita, grid],
   icons: `${app.pkgdatadir}/icons`,
   commands: {
     "quit": {

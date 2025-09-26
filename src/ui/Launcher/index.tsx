@@ -20,8 +20,8 @@ export default function Launcher() {
 
   return (
     <PickerModal gnofi={gnofi} m={80} valign="start">
-      <Adw.Clamp maximumSize={620}>
-        <Box vertical widthRequest={620} r={17} class={useStyle(dialogStyle)}>
+      <Adw.Clamp maximumSize={460}>
+        <Box vertical widthRequest={460} r={17} class={useStyle(dialogStyle)}>
           <Entry />
           <Dock />
           <DefaultSearchList />

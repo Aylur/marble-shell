@@ -155,11 +155,11 @@ export default function TopBar({ monitor }: { monitor: Gdk.Monitor }) {
   const qsOpen = createState(false)
   const [, setQsOpen] = qsOpen
 
-  useConnect(gnofi, "notify::is-open", () => {
-    if (gnofi.isOpen) {
-      setQsOpen(false)
-    }
-  })
+  // useConnect(gnofi, "notify::is-open", () => {
+  //   if (gnofi.isOpen) {
+  //     setQsOpen(false)
+  //   }
+  // })
 
   return (
     <>
