@@ -33,7 +33,7 @@ export default function WifiToggle() {
                     size={1.1}
                     weight={enabled((e) => (e ? "bold" : "normal"))}
                   >
-                    {enabled((e) => (e ? t("Enabeld") : t("Disabled")))}
+                    {enabled((e) => (e ? t("Enabled") : t("Disabled")))}
                   </Text>
                   <Text
                     truncate
