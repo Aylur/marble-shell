@@ -14,7 +14,7 @@
     };
 
     marble = {
-      url = "git+ssh://git@github.com/marble-shell/shell?ref=ui";
+      url = "git+ssh://git@github.com/marble-shell/kit";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
     };
@@ -43,7 +43,7 @@
         pnpmDeps = pkgs.pnpm.fetchDeps {
           inherit pname src;
           fetcherVersion = 2;
-          hash = "sha256-QXn957sPkN6ph7sK4eNPm8RQLzm4S7jCn8vuH4kVm6w=";
+          hash = "sha256-Ri2BGXwXXan2oIOMhbqVKf0218oaWDUHfolyZ9LdSAc=";
           sshKey = inputs.sshKey;
           prePnpmInstall = ''
             export PATH="$PATH:${pkgs.git}/bin":${pkgs.openssh}/bin

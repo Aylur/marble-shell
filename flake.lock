@@ -53,18 +53,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1758577720,
-        "narHash": "sha256-IhiSBskB2OeLpQCzzLAegCGh29/48GYe3g2Dv/ggfto=",
-        "ref": "ui",
-        "rev": "153f69a50cac7f07cb39fb12aea1048547fd9eb8",
-        "revCount": 118,
+        "lastModified": 1758980991,
+        "narHash": "sha256-nAzm98BRDIzpNnNunFkzYADdU3cQ6AoA2SihrWRIg9Y=",
+        "ref": "refs/heads/main",
+        "rev": "e7019493382608f852af7e86ab4edba153d9af71",
+        "revCount": 128,
         "type": "git",
-        "url": "ssh://git@github.com/marble-shell/shell"
+        "url": "ssh://git@github.com/marble-shell/kit"
       },
       "original": {
-        "ref": "ui",
         "type": "git",
-        "url": "ssh://git@github.com/marble-shell/shell"
+        "url": "ssh://git@github.com/marble-shell/kit"
       }
     },
     "nixpkgs": {

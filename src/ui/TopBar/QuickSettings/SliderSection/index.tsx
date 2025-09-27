@@ -18,22 +18,22 @@ import {
 
 export default function SlidersSection(props: Omit<Box.Props, "vertical" | "children">) {
   const audio = Wp.get_default()!.get_audio()!
-  const mic = createBinding(audio, "recorders").as(({ length }) => length > 0)
-  const sinks = createBinding(audio, "speakers").as(({ length }) => length > 1)
-  const apps = createBinding(audio, "streams").as(({ length }) => length > 0)
+  const brightness = Brightness.get_default()
+  const mic = Wp.get_default()!.get_default_microphone()!
+  const speaker = Wp.get_default()!.get_default_speaker()!
+  const showMic = createBinding(audio, "recorders").as(({ length }) => length > 0)
+  const showSinks = createBinding(audio, "speakers").as(({ length }) => length > 1)
+  const showApps = createBinding(audio, "streams").as(({ length }) => length > 0)
 
   function toggleMic() {
-    const mic = Wp.get_default()!.get_default_microphone()!
     mic.mute = !mic.mute
   }
 
   function toggleMute() {
-    const speaker = Wp.get_default()!.get_default_speaker()!
     speaker.mute = !speaker.mute
   }
 
   function toggleScreen() {
-    const brightness = Brightness.get_default()
     brightness.screen = brightness.screen > 0.5 ? 0 : 1
   }
 
@@ -46,7 +46,7 @@ export default function SlidersSection(props: Omit<Box.Props, "vertical" | "chil
         <SpeakerSlider valign={Gtk.Align.CENTER} color="primary" width={9} />
         <MenuArrowButton
           id="sink-selector"
-          visible={sinks}
+          visible={showSinks}
           iconSize={13}
           ml={5}
           p={3}
@@ -54,7 +54,7 @@ export default function SlidersSection(props: Omit<Box.Props, "vertical" | "chil
         />
         <MenuArrowButton
           id="app-volume"
-          visible={apps}
+          visible={showApps}
           iconSize={13}
           ml={5}
           p={3}
@@ -67,18 +67,20 @@ export default function SlidersSection(props: Omit<Box.Props, "vertical" | "chil
       <MenuRevealer id="app-volume">
         <AppMixer />
       </MenuRevealer>
-      <Box visible={mic}>
+      <Box visible={showMic}>
         <Button flat mr={3} p={3} r={13} onPrimaryClick={toggleMic}>
           <Icon icon="audio-input-microphone" />
         </Button>
         <MicSlider valign={Gtk.Align.CENTER} color="primary" width={9} />
       </Box>
-      <Box>
-        <Button flat mr={3} p={3} r={13} onPrimaryClick={toggleScreen}>
-          <Icon icon="display-brightness" />
-        </Button>
-        <BrightnessSlider valign={Gtk.Align.CENTER} color="primary" width={9} />
-      </Box>
+      {brightness.hasScreen && (
+        <Box>
+          <Button flat mr={3} p={3} r={13} onPrimaryClick={toggleScreen}>
+            <Icon icon="display-brightness" />
+          </Button>
+          <BrightnessSlider valign={Gtk.Align.CENTER} color="primary" width={9} />
+        </Box>
+      )}
     </Box>
   )
 }
