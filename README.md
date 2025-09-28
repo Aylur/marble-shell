@@ -13,7 +13,19 @@ A Wayland Desktop Shell.
 > this project, you will need access to Marble, which you can obtain by becoming
 > a [sponsor](https://github.com/sponsors/Aylur). Make sure to read the
 > [license](https://marble-shell.pages.dev/license) and
-> [usage guide](https://marble-shell.pages.dev/guide) before sponsoring.
+> [prerequisites](https://marble-shell.pages.dev/guide#prerequisites) before
+> sponsoring.
+
+## Supported Compositors
+
+Supported Compositors
+
+Currently, it primarily targets Hyprland but works on any compositor that
+supports the layer shell protocol.
+
+Some bar components only support Hyprland, namely: the workspace indicator,
+client list, and keyboard layout indicator. Support for Niri is a work in
+progress.
 
 ## Installation
 
