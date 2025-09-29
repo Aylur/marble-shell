@@ -43,7 +43,7 @@
         pnpmDeps = pkgs.pnpm.fetchDeps {
           inherit pname src;
           fetcherVersion = 2;
-          hash = "sha256-Ri2BGXwXXan2oIOMhbqVKf0218oaWDUHfolyZ9LdSAc=";
+          hash = "sha256-c3f/I/0gZ4Aqm1TCUA9CJEr21r3RFjBigaFCNKiC7ek=";
           sshKey = inputs.sshKey;
           prePnpmInstall = ''
             export PATH="$PATH:${pkgs.git}/bin":${pkgs.openssh}/bin

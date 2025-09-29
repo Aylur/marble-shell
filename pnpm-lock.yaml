@@ -10,7 +10,7 @@ importers:
     dependencies:
       ags:
         specifier: github:aylur/ags
-        version: https://codeload.github.com/aylur/ags/tar.gz/aa7a8a2dd6e54aaeb4e13a73ed3bc2283995090b(gnim@1.8.0)
+        version: https://codeload.github.com/aylur/ags/tar.gz/829827d9493e8a4ce2fdba34782c61eaa20351c8(gnim@1.8.0)
       es-toolkit:
         specifier: ^1.39.10
         version: 1.39.10
@@ -25,7 +25,7 @@ importers:
         version: 1.3.1(fuse.js@7.1.0)(gnim@1.8.0)
       marble:
         specifier: github:marble-shell/kit
-        version: git+https://git@github.com:marble-shell/kit.git#e7019493382608f852af7e86ab4edba153d9af71(fuse.js@7.1.0)
+        version: git+https://git@github.com:marble-shell/kit.git#1a4e694030b3d24b7a254a3a2fa1e86323a97bf9(fuse.js@7.1.0)
     devDependencies:
       '@ts-for-gir/cli':
         specifier: latest
@@ -195,8 +195,8 @@ packages:
   '@ts-for-gir/templates@4.0.0-beta.38':
     resolution: {integrity: sha512-LMkJSzW2nauQk895Q8beAx9X6faCWMALg0CLFOnRv8CsTQ8DvUvMPw6KO2q9roTjY4T8z+QeA+g9B8tayl1FvA==}
 
-  ags@https://codeload.github.com/aylur/ags/tar.gz/aa7a8a2dd6e54aaeb4e13a73ed3bc2283995090b:
-    resolution: {tarball: https://codeload.github.com/aylur/ags/tar.gz/aa7a8a2dd6e54aaeb4e13a73ed3bc2283995090b}
+  ags@https://codeload.github.com/aylur/ags/tar.gz/829827d9493e8a4ce2fdba34782c61eaa20351c8:
+    resolution: {tarball: https://codeload.github.com/aylur/ags/tar.gz/829827d9493e8a4ce2fdba34782c61eaa20351c8}
     version: 3.0.0
     engines: {gjs: '>=1.79.0'}
     os: [linux]
@@ -392,13 +392,13 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lru-cache@11.2.1:
-    resolution: {integrity: sha512-r8LA6i4LP4EeWOhqBaZZjDWwehd1xUJPCJd9Sv300H0ZmcUER4+JPh7bqqZeqs1o5pgtgvXm+d9UGrB5zZGDiQ==}
+  lru-cache@11.2.2:
+    resolution: {integrity: sha512-F9ODfyqML2coTIsQpSkRHnLSZMtkU8Q+mSfcaIyKwy58u+8k5nvAYeiNhsyMARvzNcXJ9QfWVrcPsC9e9rAxtg==}
     engines: {node: 20 || >=22}
 
-  marble@git+https://git@github.com:marble-shell/kit.git#e7019493382608f852af7e86ab4edba153d9af71:
-    resolution: {commit: e7019493382608f852af7e86ab4edba153d9af71, repo: git@github.com:marble-shell/kit.git, type: git}
-    version: 0.0.0
+  marble@git+https://git@github.com:marble-shell/kit.git#1a4e694030b3d24b7a254a3a2fa1e86323a97bf9:
+    resolution: {commit: 1a4e694030b3d24b7a254a3a2fa1e86323a97bf9, repo: git@github.com:marble-shell/kit.git, type: git}
+    version: 0.2.0
 
   minimatch@10.0.3:
     resolution: {integrity: sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==}
@@ -668,7 +668,7 @@ snapshots:
 
   '@ts-for-gir/templates@4.0.0-beta.38': {}
 
-  ags@https://codeload.github.com/aylur/ags/tar.gz/aa7a8a2dd6e54aaeb4e13a73ed3bc2283995090b(gnim@1.8.0):
+  ags@https://codeload.github.com/aylur/ags/tar.gz/829827d9493e8a4ce2fdba34782c61eaa20351c8(gnim@1.8.0):
     dependencies:
       gnim: 1.8.0
 
@@ -831,9 +831,9 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lru-cache@11.2.1: {}
+  lru-cache@11.2.2: {}
 
-  marble@git+https://git@github.com:marble-shell/kit.git#e7019493382608f852af7e86ab4edba153d9af71(fuse.js@7.1.0):
+  marble@git+https://git@github.com:marble-shell/kit.git#1a4e694030b3d24b7a254a3a2fa1e86323a97bf9(fuse.js@7.1.0):
     dependencies:
       es-toolkit: 1.39.10
       gnim: 1.8.0
@@ -871,7 +871,7 @@ snapshots:
 
   path-scurry@2.0.0:
     dependencies:
-      lru-cache: 11.2.1
+      lru-cache: 11.2.2
       minipass: 7.1.2
 
   picocolors@1.1.1: {}
