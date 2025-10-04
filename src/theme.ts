@@ -47,7 +47,7 @@ export const nucharm = new Theme.Stylesheet("Nucharm", {
     "hyprctl keyword general:gaps_in 8",
     'hyprctl keyword general:col.active_border "rgb(51a4e7)"',
     'hyprctl keyword general:col.inactive_border "rgb(181818)"',
-    "hyprctl keyword decoration:rounding 9",
+    "hyprctl keyword decoration:rounding 15",
     "hyprctl keyword decoration:shadow:enabled true",
     'tmux set-option -g @main_accent "blue"',
   ],
