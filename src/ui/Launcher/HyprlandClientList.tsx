@@ -37,7 +37,7 @@ export default function HyprlandClientList() {
             <Box gap={4}>
               <Icon icon={createBinding(client, "class")} size={38} />
               <Text halign="start" valign="center" wrap>
-                {createBinding(client, "title")}
+                {createBinding(client, "title").as((t) => t || "")}
               </Text>
             </Box>
           </Button>

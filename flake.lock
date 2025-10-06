@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759579626,
-        "narHash": "sha256-WIJipDpSrHl3d90szHMwJabe/QEUiBgBu4vxGwOfjzg=",
+        "lastModified": 1759789924,
+        "narHash": "sha256-ehvUhVa8GOiLBNLs77U5qP7skgADTGj9wfl4H4lyLak=",
         "owner": "aylur",
         "repo": "astal",
-        "rev": "a8e2862bc76daffb3e9bcb6bcebb9232dc46b96c",
+        "rev": "4340f050adad2895c068f2600cfed11d669679f8",
         "type": "github"
       },
       "original": {
@@ -53,11 +53,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759175127,
-        "narHash": "sha256-ugGPXau/QiKLjdGX893d0UjhfDmgpkVcRAOOiqRWHf8=",
+        "lastModified": 1759593997,
+        "narHash": "sha256-CzdC/mZWLgVwFqaWFQYp5GvhlPsRIi5McM/7/8ZeyhM=",
         "ref": "refs/heads/main",
-        "rev": "1a4e694030b3d24b7a254a3a2fa1e86323a97bf9",
-        "revCount": 132,
+        "rev": "ef2357b03149ea7554371b03ac48a92b235f72b5",
+        "revCount": 133,
         "type": "git",
         "url": "ssh://git@github.com/marble-shell/kit"
       },
