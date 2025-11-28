@@ -13,7 +13,7 @@ import { useStyle, variables as v } from "marble/theme"
 import app from "#/app"
 
 export default function HeaderSection(
-  props: Omit<Box.Props, "children" | "vertical"> & { avatarSize?: number },
+  props: Omit<Box.Props, "model" | "children" | "vertical"> & { avatarSize?: number },
 ) {
   return (
     <Box {...props}>

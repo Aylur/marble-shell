@@ -1,8 +1,7 @@
 import GLib from "gi://GLib?version=2.0"
-import { createBinding, createState, For } from "gnim"
+import { createBinding, createEffect, createState, For } from "gnim"
 import { Box, ScrollView, Separator, Text, Calendar } from "marble/components"
 import Calendars from "marble/service/Calendars"
-import { useEffect } from "gnim-hooks"
 import { useGnofi } from "#/gnofi"
 
 function now() {
@@ -43,8 +42,8 @@ export default function CalendarList() {
       GLib.DateTime.new_local(year, month, day, 0, 0, 0).format("%Y. %m. %d.")!,
   )
 
-  useEffect((get) => {
-    if (get(isActive)) {
+  createEffect(() => {
+    if (isActive()) {
       setDate(now())
     }
   })

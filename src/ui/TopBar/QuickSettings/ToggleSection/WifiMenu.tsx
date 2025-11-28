@@ -34,7 +34,7 @@ function AccessPoint({ wifi, ap }: { wifi: Network.Wifi; ap: Network.AccessPoint
   )
 
   const hasPW = createBinding(ap, "requiresPassword")
-  const lock = createComputed([hasPW, isActive], (pw, a) => pw && !a)
+  const lock = createComputed(() => hasPW() && !isActive())
 
   // TODO: password popup
   async function activate() {

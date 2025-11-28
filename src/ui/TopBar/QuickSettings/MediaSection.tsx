@@ -61,7 +61,9 @@ function MediaPlayer({ coverSize = 100 }) {
 }
 
 export default function MediaSection(
-  props: Omit<Box.Props, "children" | "vertical" | "visible"> & { flat?: boolean },
+  props: Omit<Box.Props, "model" | "children" | "vertical" | "visible"> & {
+    flat?: boolean
+  },
 ) {
   const { flat, ...rest } = props
   const style = useStyle(widgetStyle)

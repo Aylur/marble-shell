@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "ags": "github:aylur/ags",
-    "es-toolkit": "^1.39.10",
-    "gnim": "^1.8.0",
+    "es-toolkit": "^1.42.0",
+    "gnim": "^1.9.0",
     "gnim-hooks": "^0.1.0",
-    "gnofi": "^1.3.1",
+    "gnofi": "^1.3.2",
     "marble": "github:marble-shell/kit"
   },
   "prettier": {

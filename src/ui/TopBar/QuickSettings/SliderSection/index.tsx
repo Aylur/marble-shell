@@ -16,7 +16,9 @@ import {
   MicSlider,
 } from "marble/components"
 
-export default function SlidersSection(props: Omit<Box.Props, "vertical" | "children">) {
+export default function SlidersSection(
+  props: Omit<Box.Props, "vertical" | "model" | "children">,
+) {
   const audio = Wp.get_default()!.get_audio()!
   const brightness = Brightness.get_default()
   const mic = Wp.get_default()!.get_default_microphone()!

@@ -105,7 +105,7 @@ function Notification() {
 }
 
 export default function NotificationSection(
-  props: Omit<Box.Props, "vertical" | "children">,
+  props: Omit<Box.Props, "model" | "children" | "vertical" | "children">,
 ) {
   const notifs = createBinding(Notifd.get_default(), "notifications")
 

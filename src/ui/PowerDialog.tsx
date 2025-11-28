@@ -2,13 +2,12 @@ import Gtk from "gi://Gtk?version=4.0"
 import Gdk from "gi://Gdk?version=4.0"
 import Adw from "gi://Adw?version=1"
 import { Box, Button, Modal, Text } from "marble/components"
-import { useEffect } from "gnim-hooks"
 import { execAsync } from "ags/process"
-import { createBinding } from "gnim"
+import { createBinding, createEffect } from "gnim"
 import { gettext as t } from "gettext"
-import app from "#/app"
 import { useStyle } from "marble/theme"
 import { dialogStyle } from "#/theme"
+import app from "#/app"
 
 export type SystemAction = "poweroff" | "logout" | "reboot"
 
@@ -55,12 +54,12 @@ export default function PowerDialog(props: { monitor?: Gdk.Monitor }) {
   })
 
   function onYes() {
-    const cmd = command.get()
+    const cmd = command.peek()
     if (cmd) execAsync(cmd)
   }
 
-  useEffect((get) => {
-    if (get(action)) {
+  createEffect(() => {
+    if (action()) {
       btn.grab_focus()
     }
   })

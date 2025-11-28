@@ -10,7 +10,9 @@ import ThemeToggle from "./ThemeToggle"
 import WifiMenu from "./WifiMenu"
 import WifiToggle from "./WifiToggle"
 
-export default function ToggleSection(props: Omit<Box.Props, "vertical" | "children">) {
+export default function ToggleSection(
+  props: Omit<Box.Props, "model" | "vertical" | "children">,
+) {
   const { gap = 0, ...rest } = props
   const mt = gap / 2
 
