@@ -56,6 +56,7 @@
           pkgs.wrapGAppsHook4
           pkgs.gobject-introspection
           pkgs.pnpmConfigHook
+          pkgs.pnpm
           inputs.marble.packages.${system}.marbleSetupHook
           inputs.ags.packages.${system}.default
         ];
