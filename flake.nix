@@ -55,7 +55,7 @@
         nativeBuildInputs = [
           pkgs.wrapGAppsHook4
           pkgs.gobject-introspection
-          pkgs.pnpm.configHook
+          pkgs.pnpmConfigHook
           inputs.marble.packages.${system}.marbleSetupHook
           inputs.ags.packages.${system}.default
         ];
