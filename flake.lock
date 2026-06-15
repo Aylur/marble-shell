@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764289441,
-        "narHash": "sha256-ak+lgFiYE5PHByN1/BRkO5JP498hno6Ix24C1Qf/vec=",
+        "lastModified": 1775689345,
+        "narHash": "sha256-tM3s7CX+tgxlYW0Sk3nzVThg2MHn08foIuMxABupxIs=",
         "owner": "aylur",
         "repo": "ags",
-        "rev": "e169694390548dfd38ff40f1ef2163d6c3ffe3ea",
+        "rev": "bbee2f18939f1ec7ff720e717cf305e73635628f",
         "type": "github"
       },
       "original": {
@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764173295,
-        "narHash": "sha256-Jh4VtPcK2Ov+RTcV9FtyQRsxiJmXFQGfqX6jjM7/mgc=",
+        "lastModified": 1781268660,
+        "narHash": "sha256-xtnwgsKl4DJ75FSj8paONvVcCzAw0psGJOzEnplyRSU=",
         "owner": "aylur",
         "repo": "astal",
-        "rev": "7d1fac8a4b2a14954843a978d2ddde86168c75ef",
+        "rev": "948805f6e8cf7f8c08eba06ab1db1eef0e75e3a0",
         "type": "github"
       },
       "original": {
@@ -68,11 +68,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1763966396,
-        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
+        "lastModified": 1781074563,
+        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
         "type": "github"
       },
       "original": {
@@ -87,26 +87,7 @@
         "ags": "ags",
         "astal": "astal",
         "marble": "marble",
-        "nixpkgs": "nixpkgs",
-        "sshKey": "sshKey"
-      }
-    },
-    "sshKey": {
-      "flake": false,
-      "locked": {
-        "dir": "ssh/id_rsa",
-        "lastModified": 1763046199,
-        "narHash": "sha256-Tv4qqI6cHUsWkbjfKEs4gPZ3bIVXe1ZbIiDGNS2MowI=",
-        "ref": "refs/heads/main",
-        "rev": "9b980bd8213dd2277f7be0b6d08d953b8e372bd7",
-        "revCount": 92,
-        "type": "git",
-        "url": "ssh://git@github.com/aylur/vault"
-      },
-      "original": {
-        "dir": "ssh/id_rsa",
-        "type": "git",
-        "url": "ssh://git@github.com/aylur/vault"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
