@@ -18,11 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
     };
-
-    sshKey = {
-      url = "git+ssh://git@github.com/aylur/vault?dir=ssh/id_rsa";
-      flake = false;
-    };
   };
 
   outputs = inputs @ {
@@ -35,37 +30,46 @@
     packages = forAllSystems (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      default = pkgs.stdenv.mkDerivation rec {
-        pname = "marble";
-        name = "marble";
-        src = ./.;
+      default = let
+        srcWithKit = pkgs.runCommand "marble-src-with-kit" {
+          src = ./.;
+        } ''
+          cp -r --no-preserve=mode $src $out
+          cat $src/nix/pnpm-lock.yaml > $out/pnpm-lock.yaml
+          cat $src/nix/package.json > $out/package.json
+          cp -r --no-preserve=mode ${inputs.marble} $out/nix/kit
+        '';
 
-        pnpmDeps = pkgs.pnpm.fetchDeps {
+        pname = "marble";
+        src = srcWithKit;
+      in pkgs.stdenv.mkDerivation {
+        inherit pname src;
+        name = pname;
+
+        pnpmDeps = pkgs.fetchPnpmDeps {
           inherit pname src;
-          fetcherVersion = 2;
-          hash = "sha256-IACKjB8RkZMBhJDeZoYIdduVF/F9zhVdSFWli6naR1U=";
-          sshKey = inputs.sshKey;
-          prePnpmInstall = ''
-            export PATH="$PATH:${pkgs.git}/bin":${pkgs.openssh}/bin
-            eval "$(ssh-agent -s)"
-            ssh-add $sshKey
-            export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no"
-          '';
+          fetcherVersion = 3;
+          hash = "sha256-HuXDvLd5t9tS3+PnHdKMQ8Cm3B7zUAfCTCkyP6xOnTg=";
         };
 
         nativeBuildInputs = [
           pkgs.wrapGAppsHook4
           pkgs.gobject-introspection
-          pkgs.pnpm.configHook
+          pkgs.pnpmConfigHook
+          pkgs.pnpm
           inputs.marble.packages.${system}.marbleSetupHook
           inputs.ags.packages.${system}.default
         ];
 
         installPhase = ''
+          runHook preInstall
+
           mkdir -p $out/bin
           mkdir -p $out/share
           cp -r data/* $out/share
           ags bundle app.ts $out/bin/marble -d "import.meta.PKG_DATADIR='$out/share'"
+
+          runHook postInstall
         '';
       };
     });
